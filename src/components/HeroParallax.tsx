@@ -55,7 +55,7 @@ export const HeroParallax = ({
     return (
         <div
             ref={ref}
-            className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+            className="h-[300vh] sm:py-40 py-72 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
         >
             <Header />
             <motion.div
@@ -101,7 +101,7 @@ export const HeroParallax = ({
 
 export const Header = () => {
     return (
-        <div className="max-w-7xl relative mx-auto py-20 sm:px-10 sm:text-start text-center px-4 w-full left-0 bottom-20 z-10">
+        <div className="max-w-7xl relative mx-auto py-20 sm:px-10 sm:text-start text-center px-4 w-full left-0 bottom-10 z-10">
             <h1 className="text-3xl md:text-7xl font-bold dark:text-white">
                 Hi, I am <span className='text-[#915EFF]'>Yosef</span>
                 <br />
