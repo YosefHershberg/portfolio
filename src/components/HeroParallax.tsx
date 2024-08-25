@@ -109,7 +109,7 @@ export const Header = () => {
                     A <span className='text-[#915EFF]'>Full Stack</span> web developer .<br className='sm:block hidden' />
                 </span>
             </h1>
-            <p className="max-w-2xl text-base md:text-2xl mt-8 dark:text-neutral-200">
+            <p className="max-w-2xl text-xl md:text-2xl mt-8 dark:text-neutral-200">
                 Experienced in developing web applications with React, Node, Express & MongoDB, in modern architecture, industry standards and best practices.
             </p>
         </div>
