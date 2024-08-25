@@ -9,9 +9,9 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 const schema = z.object({
-  name: z.string().min(1, "Name is required"),
+  name: z.string().min(3, "Name is required"),
   email: z.string().email("Invalid email address"),
-  message: z.string().min(1, "Message is required"),
+  message: z.string().min(6, "Message is required"),
 });
 
 type FormData = z.infer<typeof schema>;
