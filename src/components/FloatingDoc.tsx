@@ -14,7 +14,6 @@ import {
     useSpring,
     useTransform,
 } from "framer-motion";
-import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
 
 export const FloatingDock = ({
