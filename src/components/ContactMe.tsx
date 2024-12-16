@@ -12,7 +12,7 @@ const ContactMe = () => {
                 <div className="md:w-1/2">
                     <ContactFrom />
                 </div>
-                <div className="md:block hidden md:w-1/2">
+                <div className="md:block hidden md:w-1/2 cursor-grab active:cursor-grabbing">
                     <EarthCanvas />
                 </div>
             </div>
