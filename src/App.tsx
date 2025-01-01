@@ -9,7 +9,6 @@ import Projects from './components/Projects';
 import Testimonials from './components/Testimonials';
 import ContactMe from './components/ContactMe';
 import { Contact, NotebookText, UserCheck } from 'lucide-react';
-import { Button } from './components/ui/button';
 
 const App = () => {
   return (
