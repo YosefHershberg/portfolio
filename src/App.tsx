@@ -9,6 +9,7 @@ import Projects from './components/Projects';
 import Testimonials from './components/Testimonials';
 import ContactMe from './components/ContactMe';
 import { Contact, NotebookText, UserCheck } from 'lucide-react';
+import { Button } from './components/ui/button';
 
 const App = () => {
   return (
@@ -39,9 +40,8 @@ const App = () => {
       <FloatingDock
         items={links}
         desktopClassName="sticky bottom-6 w-fit shadow z-100"
-        mobileClassName="sticky bottom-6 ml-4 z-100"
+        mobileClassName="sticky bottom-6 right-6 ml-4 z-100"
       />
-
     </main>
 
   )

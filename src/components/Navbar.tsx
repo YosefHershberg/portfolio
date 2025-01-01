@@ -1,7 +1,18 @@
 import { Link } from "react-router-dom";
 import { logo } from "@/assets";
+import { Button } from "./ui/button";
+
 
 const Navbar = () => {
+    
+    const downloadCV = () => {
+        const link = document.createElement('a');
+        link.href = '/public/resume.pdf';
+        link.download = 'Yosef_Hershberg_CV.pdf'
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
 
     return (
         <nav
@@ -30,6 +41,13 @@ const Navbar = () => {
                         | &nbsp; Full Stack Developer
                     </span>
                 </p>
+                <Button
+                    variant='outline'
+                    className="hidden sm:flex"
+                    onClick={downloadCV}
+                >
+                    Download CV
+                </Button>
             </div>
 
         </nav>
