@@ -8,6 +8,7 @@ import git from './techs/git.png'
 import graphql from './techs/graphql.png'
 import javascript from './techs/javascript.png'
 import restapi from './techs/rest-api.png'
+import aws from './techs/aws.png'
 import expo from './techs/expo.png'
 import jest from './techs/jest.png'
 import docker from './techs/docker.png'
@@ -33,5 +34,6 @@ export {
   redis,
   codesplainer,
   culinarygpt,
-  whatsappthing
+  whatsappthing,
+  aws
 }
