@@ -34,7 +34,7 @@ export default function ContactForm() {
           to_name: "Yosef Herhsberg",
           from_email: data.email,
           to_email: "berioo2000@gmail.com",
-          message: data.message,
+          message: `From ${data.email}: ${data.message}`,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
