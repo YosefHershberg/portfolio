@@ -23,10 +23,10 @@ export default function ContactForm() {
 
   const [isSubmitting, setIsSubmitting] = React.useState(false);
 
-  const onSubmit: SubmitHandler<FormData> = (data) => {
+  const onSubmit: SubmitHandler<FormData> = async (data) => {
     setIsSubmitting(true);
-    emailjs
-      .send(
+    try {
+      await emailjs.send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
@@ -37,18 +37,14 @@ export default function ContactForm() {
           message: `From ${data.email}: ${data.message}`,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setIsSubmitting(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-        },
-        (error) => {
-          setIsSubmitting(false);
-          console.error(error);
-          alert("Ahh, something went wrong. Please try again.");
-        }
       );
+      alert("Thank you. I will get back to you as soon as possible.");
+    } catch (error) {
+      console.error(error);
+      alert("Ahh, something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
