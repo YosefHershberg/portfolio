@@ -7,6 +7,7 @@ import emailjs from '@emailjs/browser'
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { toast } from "sonner";
 
 const schema = z.object({
   name: z.string().min(3, "Name is required"),
@@ -38,12 +39,13 @@ export default function ContactForm() {
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       );
-      alert("Thank you. I will get back to you as soon as possible.");
+      
     } catch (error) {
       console.error(error);
-      alert("Ahh, something went wrong. Please try again.");
+      toast.error("Failed to send email");
     } finally {
       setIsSubmitting(false);
+      toast.success("Email sent successfully");
     }
   };
 
