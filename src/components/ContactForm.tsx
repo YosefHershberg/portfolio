@@ -7,7 +7,8 @@ import emailjs from '@emailjs/browser'
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { toast } from "sonner";
+
+import { toast } from "@/hooks/use-toast";
 
 const schema = z.object({
   name: z.string().min(3, "Name is required"),
@@ -42,10 +43,18 @@ export default function ContactForm() {
       
     } catch (error) {
       console.error(error);
-      toast.error("Failed to send email");
+      toast({
+        variant: "destructive",
+        title: "Oops! Something went wrong!",
+        description: "An error occurred while sending the email",
+    })
     } finally {
       setIsSubmitting(false);
-      toast.success("Email sent successfully");
+      toast({
+        variant: "default",
+        title: "Email sent successfully!",
+        description: "I will get back to you as soon as possible",
+      })
     }
   };
 
