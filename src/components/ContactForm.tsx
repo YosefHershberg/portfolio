@@ -19,6 +19,7 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 export default function ContactForm() {
+
   const { register, handleSubmit, formState: { errors } } = useForm<FormData>({
     resolver: zodResolver(schema),
   });
@@ -40,14 +41,14 @@ export default function ContactForm() {
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       );
-      
+
     } catch (error) {
       console.error(error);
       toast({
         variant: "destructive",
         title: "Oops! Something went wrong!",
         description: "An error occurred while sending the email",
-    })
+      })
     } finally {
       setIsSubmitting(false);
       toast({
@@ -59,7 +60,9 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="w-full mx-auto flex flex-col items-center rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
+    <div
+      className="w-full mx-auto flex flex-col items-center rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black"
+    >
       <h1 className="text-2xl font-bold">Send me an email !</h1>
       <form className="my-2 w-full" onSubmit={handleSubmit(onSubmit)}>
         <LabelInputContainer className="mb-6">

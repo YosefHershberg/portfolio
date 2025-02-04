@@ -1,7 +1,11 @@
 
 const About = () => {
+
   return (
-    <section className='relative sm:mx-6 mx-4 my-14 pt-1 flex flex-col items-center' id='about'>
+    <section
+      className='relative sm:mx-6 mx-4 my-14 pt-1 flex flex-col items-center'
+      id='about'
+    >
       <div className='w-fit my-14 flex flex-col items-center'>
         <p className='uppercase mb-4 text-zinc-400'>introduction</p>
         <h2 className='sm:text-4xl text-2xl font-bold text-center text-[#915EFF]'>A little about me...</h2>

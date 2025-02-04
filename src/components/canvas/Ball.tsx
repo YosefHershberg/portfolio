@@ -2,6 +2,7 @@ import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Decal, Float, OrbitControls, Preload, useTexture } from '@react-three/drei'
 import CanvasLoader from './Loader'
+import useIntersectionObserver from '@/hooks/useIntersectionObserver'
 
 const Ball = (props: any) => {
   const [decal] = useTexture([props.imgURL])
@@ -28,22 +29,31 @@ const Ball = (props: any) => {
   )
 }
 
-const BallCanvas = ({ icon }: any) => {
+const BallCanvas = ({ icon, threshold }: { icon: any, threshold: number }) => {
+  const options = { threshold };
+  const { ref, isVisible } = useIntersectionObserver<HTMLDivElement>(options);
 
   return (
-    <Canvas
-      frameloop='demand'
-      gl={{ preserveDrawingBuffer: true }}
+    <div
+      ref={ref}
+      className={`size-24 cursor-grab active:cursor-grabbing transition-transform duration-700
+         ${isVisible ? 'translate-y-0' : 'translate-y-full'}
+      `}
     >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-        />
-        <Ball imgURL={icon} />
-      </Suspense>
+      <Canvas
+        frameloop='demand'
+        gl={{ preserveDrawingBuffer: true }}
+      >
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls
+            enableZoom={false}
+          />
+          <Ball imgURL={icon} />
+        </Suspense>
 
-      <Preload all />
-    </Canvas>
+        <Preload all />
+      </Canvas>
+    </div>
   )
 }
 

@@ -7,6 +7,7 @@ import {
     MotionValue,
 } from "framer-motion";
 import { Link } from "react-router-dom";
+import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 
 export const HeroParallax = ({
     products,
@@ -100,8 +101,16 @@ export const HeroParallax = ({
 };
 
 export const Header = () => {
+    const options = { threshold: 0.1 };
+    const { ref, isVisible } = useIntersectionObserver<HTMLDivElement>(options);
+
     return (
-        <div className="max-w-7xl relative mx-auto py-20 sm:px-10 sm:text-start text-center px-4 w-full left-0 bottom-20 z-10">
+        <div
+            ref={ref}
+            className={`max-w-7xl relative mx-auto py-20 sm:px-10 sm:text-start text-center px-4 w-full left-0 bottom-20 z-10 transition-transform duration-1000 ease-out transform 
+                ${isVisible ? 'translate-y-0' : 'translate-y-20'
+            }`}
+        >
             <h1 className="text-3xl md:text-7xl font-bold dark:text-white">
                 Hi, I am <span className='text-[#915EFF]'>Yosef</span>
                 <br />
@@ -115,6 +124,7 @@ export const Header = () => {
         </div>
     );
 };
+
 
 export const ProductCard = ({
     product,

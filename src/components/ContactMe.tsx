@@ -2,6 +2,7 @@ import EarthCanvas from "./canvas/Earth"
 import ContactFrom from "./ContactForm"
 
 const ContactMe = () => {
+
     return (
         <section className='relative w-screen max-w-6xl sm:px-10 px-6 sm:mx-6 mx-4 my-14 pt-1 flex flex-col items-center' id='contact'>
             <div className='w-fit my-14 flex flex-col items-center'>
@@ -12,7 +13,9 @@ const ContactMe = () => {
                 <div className="md:w-1/2">
                     <ContactFrom />
                 </div>
-                <div className="md:block hidden md:w-1/2 cursor-grab active:cursor-grabbing">
+                <div
+                    className={`md:block hidden md:w-1/2 cursor-grab active:cursor-grabbing`}
+                >
                     <EarthCanvas />
                 </div>
             </div>
