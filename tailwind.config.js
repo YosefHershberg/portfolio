@@ -20,6 +20,9 @@ module.exports = {
 	prefix: "",
 	theme: {
     	extend: {
+			fontFamily: {
+				"century-gothic": ["century-gothic", "sans-serif"]
+			  },
     		maskImage: {
     			fadeSides: 'linear-gradient(to right, transparent, black, black, transparent)'
     		},

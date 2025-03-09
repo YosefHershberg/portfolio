@@ -55,6 +55,7 @@ const links = [
       <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
     href: "#",
+    newTab: false
   },
 
   {
@@ -63,6 +64,7 @@ const links = [
       <NotebookText className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
     href: "#projects",
+    newTab: false
   },
   {
     title: "Testimonials",
@@ -70,6 +72,7 @@ const links = [
       <UserCheck className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
     href: "#testimonials",
+    newTab: false
   },
   {
     title: "Contact",
@@ -77,19 +80,22 @@ const links = [
       <Contact  className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
     href: "#contact",
+    newTab: false
   },
   {
     title: "LinkedIn",
     icon: (
       <Linkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
-    href: "https://www.linkedin.com/in/yosef-hershberg-111975264/"
+    href: "https://www.linkedin.com/in/yosef-hershberg-111975264/",
+    newTab: true
   },
   {
     title: 'Github',
     icon: (
       <Github className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
-    href: 'https://github.com/YosefHershberg'
+    href: 'https://github.com/YosefHershberg',
+    newTab: true
   }
 ];

@@ -1,4 +1,4 @@
-import { docker, aws, expo, express, git, graphql, redis, javascript, jest, mongodb, node, react, restapi, typescript, culinarygpt, codesplainer, whatsappthing } from "@/assets";
+import { docker, aws, expo, express, git, graphql, redis, javascript, jest, mongodb, node, react, restapi, typescript, culinarygpt, codesplainer, whatsappthing, next } from "@/assets";
 
 export const products = [
   {
@@ -69,6 +69,10 @@ export const technologies = [
   {
     name: 'Express JS',
     icon: express
+  },
+  {
+    name: 'NextJS',
+    icon: next
   },
   {
     name: "MongoDB",

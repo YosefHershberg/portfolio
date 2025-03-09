@@ -21,7 +21,7 @@ export const FloatingDock = ({
     desktopClassName,
     mobileClassName,
 }: {
-    items: { title: string; icon: React.ReactNode; href: string }[];
+    items: { title: string; icon: React.ReactNode; href: string, newTab: boolean }[];
     desktopClassName?: string;
     mobileClassName?: string;
 }) => {
@@ -37,7 +37,7 @@ const FloatingDockMobile = ({
     items,
     className,
 }: {
-    items: { title: string; icon: React.ReactNode; href: string }[];
+    items: { title: string; icon: React.ReactNode; href: string, newTab: boolean }[];
     className?: string;
 }) => {
     const [open, setOpen] = useState(false);
@@ -70,6 +70,7 @@ const FloatingDockMobile = ({
                                     href={item.href}
                                     key={item.title}
                                     className="size-16 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center"
+                                    target={item.newTab ? "_blank" : "_self"}
                                 >
                                     <div className="size-7">{item.icon}</div>
                                 </a>
@@ -92,7 +93,7 @@ const FloatingDockDesktop = ({
     items,
     className,
 }: {
-    items: { title: string; icon: React.ReactNode; href: string }[];
+    items: { title: string; icon: React.ReactNode; href: string, newTab: boolean }[];
     className?: string;
 }) => {
     let mouseX = useMotionValue(Infinity);
@@ -106,7 +107,7 @@ const FloatingDockDesktop = ({
             )}
         >
             {items.map((item) => (
-                <IconContainer mouseX={mouseX} key={item.title} {...item} />
+                <IconContainer mouseX={mouseX} key={item.title} {...item} newTab={item.newTab} />
             ))}
         </motion.div>
     );
@@ -117,11 +118,13 @@ function IconContainer({
     title,
     icon,
     href,
+    newTab
 }: {
     mouseX: MotionValue;
     title: string;
     icon: React.ReactNode;
     href: string;
+    newTab: boolean;
 }) {
     let ref = useRef<HTMLDivElement>(null);
 
@@ -166,7 +169,7 @@ function IconContainer({
     const [hovered, setHovered] = useState(false);
 
     return (
-        <a href={href}>
+        <a href={href} target={newTab ? '_blank': '_self'} rel="noreferrer">
             <motion.div
                 ref={ref}
                 style={{ width, height }}

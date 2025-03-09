@@ -16,6 +16,7 @@ import redis from './techs/redis.png'
 import codesplainer from './projs/codesplainer.png'
 import culinarygpt from './projs/culinaygpt.png'
 import whatsappthing from './projs/whatsappthing.png'
+import next from './techs/next.png'
 
 export {
   logo,
@@ -36,4 +37,5 @@ export {
   culinarygpt,
   whatsappthing,
   aws,
+  next
 }
