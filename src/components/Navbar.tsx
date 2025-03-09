@@ -2,9 +2,8 @@ import { Link } from "react-router-dom";
 import { logo } from "@/assets";
 import { Button } from "./ui/button";
 
-
 const Navbar = () => {
-    
+
     const downloadCV = () => {
         const link = document.createElement('a');
         link.href = '/public/resume.pdf';
@@ -41,13 +40,15 @@ const Navbar = () => {
                         | &nbsp; Full Stack Developer
                     </span>
                 </p>
-                <Button
-                    variant='outline'
-                    className="hidden sm:flex"
-                    onClick={downloadCV}
-                >
-                    Download CV
-                </Button>
+
+                <div className="items-center gap-4 hidden md:flex">
+                    <Button
+                        variant='outline'
+                        onClick={downloadCV}
+                    >
+                        Download CV
+                    </Button>
+                </div>
             </div>
 
         </nav>

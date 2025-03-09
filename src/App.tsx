@@ -8,7 +8,7 @@ import Techs from './components/Techs';
 import Projects from './components/Projects';
 import Testimonials from './components/Testimonials';
 import ContactMe from './components/ContactMe';
-import { Contact, NotebookText, UserCheck } from 'lucide-react';
+import { Contact, Github, Linkedin, NotebookText, UserCheck } from 'lucide-react';
 
 const App = () => {
   return (
@@ -78,4 +78,18 @@ const links = [
     ),
     href: "#contact",
   },
+  {
+    title: "LinkedIn",
+    icon: (
+      <Linkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    ),
+    href: "https://www.linkedin.com/in/yosef-hershberg-111975264/"
+  },
+  {
+    title: 'Github',
+    icon: (
+      <Github className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    ),
+    href: 'https://github.com/YosefHershberg'
+  }
 ];

@@ -35,5 +35,5 @@ export {
   codesplainer,
   culinarygpt,
   whatsappthing,
-  aws
+  aws,
 }
