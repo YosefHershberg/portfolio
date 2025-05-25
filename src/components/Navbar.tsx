@@ -4,14 +4,14 @@ import { Button } from "./ui/button";
 
 const Navbar = () => {
 
-    const downloadCV = () => {
-        const link = document.createElement('a');
-        link.href = '/public/resume.pdf';
-        link.download = 'Yosef_Hershberg_CV.pdf'
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    };
+    // const downloadCV = () => {
+    //     const link = document.createElement('a');
+    //     link.href = '/public/resume.pdf';
+    //     link.download = 'Yosef_Hershberg_CV.pdf'
+    //     document.body.appendChild(link);
+    //     link.click();
+    //     document.body.removeChild(link);
+    // };
 
     return (
         <nav
@@ -41,14 +41,14 @@ const Navbar = () => {
                     </span>
                 </p>
 
-                <div className="items-center gap-4 hidden md:flex">
+                {/* <div className="items-center gap-4 hidden md:flex">
                     <Button
                         variant='outline'
                         onClick={downloadCV}
                     >
                         Download CV
                     </Button>
-                </div>
+                </div> */}
             </div>
 
         </nav>
