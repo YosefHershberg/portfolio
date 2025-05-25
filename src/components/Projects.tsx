@@ -1,8 +1,8 @@
+import useIntersectionObserver from "@/hooks/useIntersectionObserver";
+import { Link } from "react-router-dom";
 import { projects } from "@/constants";
 import { CardBody, CardContainer, CardItem } from "./3DCard";
-import { Link } from "react-router-dom";
 import { Github } from "lucide-react";
-import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 
 const Projects = () => {
     return (
