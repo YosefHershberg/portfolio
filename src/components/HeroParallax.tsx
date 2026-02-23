@@ -56,7 +56,7 @@ export const HeroParallax = ({
     return (
         <div
             ref={ref}
-            className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+            className="h-[300vh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
         >
             <Header />
             <motion.div
@@ -105,9 +105,10 @@ export const Header = () => {
     const { ref, isVisible } = useIntersectionObserver<HTMLDivElement>(options);
 
     return (
+        <div className="h-screen flex items-center">
         <div
             ref={ref}
-            className={`max-w-7xl relative mx-auto py-20 sm:px-10 sm:text-start text-center px-4 w-full left-0 bottom-20 z-10 transition-transform duration-1000 ease-out transform 
+            className={`max-w-7xl relative mx-auto sm:px-10 sm:text-start text-center px-4 w-full left-0 z-10 transition-transform duration-1000 ease-out transform
                 ${isVisible ? 'translate-y-0' : 'translate-y-20'
             }`}
         >
@@ -121,6 +122,7 @@ export const Header = () => {
             <p className="max-w-2xl text-xl md:text-2xl mt-8 dark:text-neutral-200">
                 Experienced in developing web applications using React, Node, Express & MongoDB in modern architecture, industry standards and best practices.
             </p>
+        </div>
         </div>
     );
 };
