@@ -5,10 +5,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-pnpm dev          # Start dev server
-pnpm build        # Type-check then build (tsc -b && vite build)
-pnpm lint         # Run ESLint
-pnpm preview      # Preview production build
+npm run dev       # Start dev server
+npm run build     # Type-check then build (tsc -b && vite build)
+npm run lint      # Run ESLint
+npm run preview   # Preview production build
 ```
 
 No test suite is configured.

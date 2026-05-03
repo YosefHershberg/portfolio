@@ -17,6 +17,12 @@ import codesplainer from './projs/codesplainer.png'
 import culinarygpt from './projs/culinaygpt.png'
 import whatsappthing from './projs/whatsappthing.png'
 import next from './techs/next.png'
+import mysql from './techs/mysql.png'
+import postgresql from './techs/postgresql.png'
+import sqlserver from './techs/sqlserver.png'
+import python from './techs/python.png'
+import fastapi from './techs/fastapi.png'
+import kubernetes from './techs/kubernetes.png'
 
 export {
   logo,
@@ -37,5 +43,11 @@ export {
   culinarygpt,
   whatsappthing,
   aws,
-  next
+  next,
+  mysql,
+  postgresql,
+  sqlserver,
+  python,
+  fastapi,
+  kubernetes
 }

@@ -11,10 +11,14 @@ const About = () => {
         <h2 className='sm:text-4xl text-2xl font-bold text-center text-[#915EFF]'>A little about me...</h2>
       </div>
       <p className='m-auto max-w-[50rem] sm:text-2xl'>
-        I'm Yosef, a Full Stack web developer experienced with React, Node, Express, and MongoDB.
+        I'm Yosef, a Full Stack Developer experienced with React, Node.js, SQL & NoSQL databases, and AWS in AI-driven development.
         <br />
         <br />
-        My last project was to develop an AI-based recipe creation application that helps users discover personalized dishes based on dietary preferences, ingredient availability, and nutritional requirements. I am ready for my next challenge in a company looking for a quick learner to develop its core applications and solve complex problems.
+
+        Currently at Proceed, I build enterprise-grade Project & Portfolio Management applications on Broadcom Clarity, integrating React and Node.js services with SQL databases to deliver scalable solutions for multi-project organizations.
+        <br />
+        <br />
+        Alongside my work, I lead full stack courses at Analiza Education Center, training students in JavaScript, React, Node, SQL/NoSQL, and cloud-based services like Kubernetes. Previously, I built CulinaryGPT — an AI-based recipe creation platform serving thousands of users, deployed on AWS ECS with React, Node.js, and MongoDB. I'm ready for my next challenge in a company looking for a committed developer who delivers robust, maintainable, and scalable solutions.
         <br />
         <br />
 
@@ -27,11 +31,6 @@ const About = () => {
         <br />
 
         My expertise and commitment set me apart in a competitive industry. I am always seeking new challenges, and my dedication to excellence ensures that your business goals will be met quickly and efficiently. If you have any questions or would like to connect, please reach out.
-        <br />
-        <br />
-
-        Throughout my journey enhancing my full stack development skills, I have picked up many useful technologies across various domains, including front-end frameworks, back-end development, database management, API integration, state management tools, and unit testing. My curiosity and passion for full stack development continue to grow.
-
       </p>
     </section>
   )

@@ -4,11 +4,12 @@ import { products } from './constants'
 import { FloatingDock } from "./components/FloatingDoc";
 import { IconHome } from "@tabler/icons-react";
 import About from './components/About';
+import Experiences from './components/Experiences';
 import Techs from './components/Techs';
 import Projects from './components/Projects';
 import Testimonials from './components/Testimonials';
 import ContactMe from './components/ContactMe';
-import { Contact, Github, Linkedin, NotebookText, UserCheck } from 'lucide-react';
+import { Briefcase, Contact, Github, Linkedin, NotebookText, UserCheck } from 'lucide-react';
 
 const App = () => {
   return (
@@ -25,6 +26,8 @@ const App = () => {
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-zinc-950 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
         <About />
+
+        <Experiences />
 
         <Techs />
 
@@ -64,6 +67,14 @@ const links = [
       <NotebookText className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
     href: "#projects",
+    newTab: false
+  },
+  {
+    title: "Experience",
+    icon: (
+      <Briefcase className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    ),
+    href: "#experience",
     newTab: false
   },
   {

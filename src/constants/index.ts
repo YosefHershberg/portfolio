@@ -1,4 +1,4 @@
-import { docker, aws, expo, express, git, graphql, redis, javascript, jest, mongodb, node, react, restapi, typescript, culinarygpt, codesplainer, whatsappthing, next } from "@/assets";
+import { docker, aws, express, git, redis, javascript, mongodb, node, react, typescript, culinarygpt, codesplainer, whatsappthing, next, mysql, postgresql, sqlserver, kubernetes } from "@/assets";
 
 export const products = [
   {
@@ -87,24 +87,8 @@ export const technologies = [
     icon: typescript,
   },
   {
-    name: "GraphQL",
-    icon: graphql,
-  },
-  {
-    name: "REST API",
-    icon: restapi,
-  },
-  {
     name: "git",
     icon: git,
-  },
-  {
-    name: 'React Native',
-    icon: expo
-  },
-  {
-    name: 'Jest',
-    icon: jest
   },
   {
     name: 'Docker',
@@ -117,6 +101,22 @@ export const technologies = [
   {
     name: 'Redis',
     icon: redis
+  },
+  {
+    name: 'MySQL',
+    icon: mysql
+  },
+  {
+    name: 'PostgreSQL',
+    icon: postgresql
+  },
+  {
+    name: 'SQL Server',
+    icon: sqlserver
+  },
+  {
+    name: 'Kubernetes',
+    icon: kubernetes
   },
 ];
 
