@@ -70,14 +70,6 @@ const links = [
     newTab: false
   },
   {
-    title: "Experience",
-    icon: (
-      <Briefcase className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    ),
-    href: "#experience",
-    newTab: false
-  },
-  {
     title: "Testimonials",
     icon: (
       <UserCheck className="h-full w-full text-neutral-500 dark:text-neutral-300" />

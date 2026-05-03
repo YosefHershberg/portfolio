@@ -11,7 +11,11 @@
       "PowerShell(npm install *)",
       "PowerShell($dest='src/assets/techs/fastapi.png'; Invoke-WebRequest -Uri 'https://fastapi.tiangolo.com/img/favicon.png' -OutFile $dest -UseBasicParsing; $b=[IO.File]::ReadAllBytes\\($dest\\); Write-Output \\(\"$\\($b.Length\\) bytes  sig=\" + [BitConverter]::ToString\\($b[0..7]\\)\\))",
       "PowerShell(npm run *)",
-      "Bash(timeout 8 tail -n 40 \"C:/Users/yosefh/AppData/Local/Temp/claude/C--Users-yosefh-OneDrive---hms-co-il-Desktop-portfolio/f42ca638-cf26-4cd7-97da-08b71cb40128/tasks/bj1czqnfo.output\")"
+      "Bash(timeout 8 tail -n 40 \"C:/Users/yosefh/AppData/Local/Temp/claude/C--Users-yosefh-OneDrive---hms-co-il-Desktop-portfolio/f42ca638-cf26-4cd7-97da-08b71cb40128/tasks/bj1czqnfo.output\")",
+      "Bash(npx tsc *)",
+      "Bash(git gc *)",
+      "Bash(git count-objects *)",
+      "Bash(git push *)"
     ]
   }
 }
