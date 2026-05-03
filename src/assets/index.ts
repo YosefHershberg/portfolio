@@ -5,12 +5,8 @@ import node from './techs/nodejs.png'
 import express from './techs/expressjs.png'
 import mongodb from './techs/mongodb.png'
 import git from './techs/git.png'
-import graphql from './techs/graphql.png'
 import javascript from './techs/javascript.png'
-import restapi from './techs/rest-api.png'
 import aws from './techs/aws.png'
-import expo from './techs/expo.png'
-import jest from './techs/jest.png'
 import docker from './techs/docker.png'
 import redis from './techs/redis.png'
 import codesplainer from './projs/codesplainer.png'
@@ -20,8 +16,6 @@ import next from './techs/next.png'
 import mysql from './techs/mysql.png'
 import postgresql from './techs/postgresql.png'
 import sqlserver from './techs/sqlserver.png'
-import python from './techs/python.png'
-import fastapi from './techs/fastapi.png'
 import kubernetes from './techs/kubernetes.png'
 
 export {
@@ -32,11 +26,7 @@ export {
   express,
   mongodb,
   git,
-  graphql,
   javascript,
-  restapi,
-  expo,
-  jest,
   docker,
   redis,
   codesplainer,
@@ -47,7 +37,5 @@ export {
   mysql,
   postgresql,
   sqlserver,
-  python,
-  fastapi,
   kubernetes
 }
