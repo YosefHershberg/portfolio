@@ -120,7 +120,7 @@ export const Header = () => {
                 </span>
             </h1>
             <p className="max-w-2xl text-xl md:text-2xl mt-8 dark:text-neutral-200">
-                Experienced in developing web applications using React, Node, Express & MongoDB in modern architecture, industry standards and best practices.
+                Experienced in developing web applications using React, Node, SQL & NoSQL databases and cloud technologies in modern architecture, industry standards and best practices.
             </p>
         </div>
         </div>

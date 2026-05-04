@@ -123,7 +123,7 @@ const Experiences = () => {
     return (
         <section
             className="relative sm:mx-6 mx-4 my-14 pt-1 flex flex-col items-center w-full"
-            id="experience"
+            id="experiences"
         >
             <div className="w-fit my-14 flex flex-col items-center">
                 <p className="uppercase mb-4 text-zinc-400">what I have done</p>

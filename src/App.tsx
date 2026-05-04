@@ -33,7 +33,7 @@ const App = () => {
 
         <Projects />
 
-        <Testimonials />
+        {/* <Testimonials /> */}
 
         <ContactMe />
 
@@ -66,15 +66,23 @@ const links = [
     icon: (
       <NotebookText className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
-    href: "#projects",
+    href: "#about",
     newTab: false
   },
   {
-    title: "Testimonials",
+    title: "Experiences",
+    icon: (
+      <Briefcase className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    ),
+    href: "#experiences",
+    newTab: false
+  },
+  {
+    title: "Projects",
     icon: (
       <UserCheck className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
-    href: "#testimonials",
+    href: "#projects",
     newTab: false
   },
   {
