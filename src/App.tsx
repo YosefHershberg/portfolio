@@ -7,7 +7,6 @@ import About from './components/About';
 import Experiences from './components/Experiences';
 import Techs from './components/Techs';
 import Projects from './components/Projects';
-import Testimonials from './components/Testimonials';
 import ContactMe from './components/ContactMe';
 import { Briefcase, Contact, Github, Linkedin, NotebookText, UserCheck } from 'lucide-react';
 
